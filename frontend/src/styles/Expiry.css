@@ -1,0 +1,535 @@
+/* =========================================================
+   LIFEVAULT AI — EXPIRY PAGE
+   ========================================================= */
+
+.expiry-page {
+  width: calc(100% - 80px);
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 42px 0 90px;
+  box-sizing: border-box;
+  color: #151a2b;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.expiry-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 32px;
+}
+
+.expiry-header h1 {
+  margin: 0;
+  color: #151a2b;
+  font-size: clamp(42px, 4vw, 60px);
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: -2.8px;
+}
+
+.expiry-header p {
+  margin: 14px 0 0;
+  color: #758096;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.expiry-header .section-eyebrow {
+  display: block;
+  margin-bottom: 12px;
+  color: #635bff;
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   SUMMARY CARDS
+   ========================================================= */
+
+.expiry-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.expiry-stat {
+  min-height: 145px;
+  padding: 23px;
+  border: 1px solid #e4e7ee;
+  border-radius: 18px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.expiry-stat span {
+  display: block;
+  color: #858e9e;
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 1px;
+}
+
+.expiry-stat strong {
+  display: block;
+  margin-top: 20px;
+  color: #172033;
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.expiry-stat p {
+  margin: 9px 0 0;
+  color: #929aaa;
+  font-size: 10px;
+}
+
+.expiry-stat.warning {
+  border-color: #ffe1b2;
+  background: #fffaf2;
+}
+
+.expiry-stat.warning strong {
+  color: #c7791d;
+}
+
+.expiry-stat.danger {
+  border-color: #ffd0d4;
+  background: #fff5f5;
+}
+
+.expiry-stat.danger strong {
+  color: #d34550;
+}
+
+/* =========================================================
+   MAIN PANEL
+   ========================================================= */
+
+.expiry-panel {
+  padding: 28px;
+  border: 1px solid #e4e7ee;
+  border-radius: 21px;
+  background: #ffffff;
+  box-shadow: 0 8px 30px rgba(20, 27, 45, 0.035);
+}
+
+.expiry-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.expiry-panel-header h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 26px;
+  font-weight: 850;
+  letter-spacing: -0.7px;
+}
+
+.expiry-panel-header p {
+  margin: 7px 0 0;
+  color: #858e9e;
+  font-size: 11px;
+}
+
+/* =========================================================
+   FILTERS
+   ========================================================= */
+
+.expiry-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.expiry-filter {
+  height: 37px;
+  padding: 0 14px;
+  border: 1px solid #e0e4eb;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #697386;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.expiry-filter:hover,
+.expiry-filter.active {
+  border-color: #635bff;
+  background: #f1efff;
+  color: #635bff;
+}
+
+/* =========================================================
+   DOCUMENT LIST
+   ========================================================= */
+
+.expiry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.expiry-item {
+  display: grid;
+  grid-template-columns: 55px minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 18px;
+  min-height: 86px;
+  padding: 15px 18px;
+  border: 1px solid #e8ebf0;
+  border-radius: 14px;
+  background: #ffffff;
+  box-sizing: border-box;
+  transition: 0.2s ease;
+}
+
+.expiry-item:hover {
+  border-color: #d6d2ff;
+  background: #fcfbff;
+  transform: translateX(2px);
+}
+
+/* =========================================================
+   FILE ICON
+   ========================================================= */
+
+.expiry-file-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: #f1efff;
+  color: #635bff;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.expiry-item.expired .expiry-file-icon {
+  background: #fff0f1;
+  color: #d34550;
+}
+
+.expiry-item.warning .expiry-file-icon {
+  background: #fff4e3;
+  color: #c7791d;
+}
+
+/* =========================================================
+   DOCUMENT INFO
+   ========================================================= */
+
+.expiry-info {
+  min-width: 0;
+}
+
+.expiry-info h3 {
+  margin: 0;
+  color: #20293c;
+  font-size: 14px;
+  font-weight: 850;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.expiry-info p {
+  margin: 6px 0 0;
+  color: #8b94a3;
+  font-size: 10px;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.expiry-status {
+  min-width: 78px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  text-align: center;
+  background: #e9faf2;
+  color: #179463;
+  font-size: 9px;
+  font-weight: 850;
+}
+
+.expiry-status.warning {
+  background: #fff3df;
+  color: #c4771b;
+}
+
+.expiry-status.expired {
+  background: #fff0f1;
+  color: #d34550;
+}
+
+/* =========================================================
+   DATE
+   ========================================================= */
+
+.expiry-date {
+  min-width: 105px;
+  text-align: right;
+}
+
+.expiry-date span {
+  display: block;
+  margin-bottom: 5px;
+  color: #9aa2af;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.expiry-date strong {
+  color: #293248;
+  font-size: 11px;
+  font-weight: 850;
+}
+
+/* =========================================================
+   VIEW BUTTON
+   ========================================================= */
+
+.expiry-view-button {
+  height: 38px;
+  padding: 0 14px;
+  border: 1px solid #dfe3ea;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #293248;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.expiry-view-button:hover {
+  border-color: #635bff;
+  background: #f4f2ff;
+  color: #635bff;
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.expiry-empty {
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 30px;
+  border: 1px dashed #d7dce5;
+  border-radius: 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.expiry-empty-icon {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  border-radius: 18px;
+  background: #eafaf2;
+  color: #179463;
+  font-size: 26px;
+}
+
+.expiry-empty h2 {
+  margin: 0;
+  color: #182033;
+  font-size: 24px;
+  font-weight: 850;
+}
+
+.expiry-empty p {
+  max-width: 500px;
+  margin: 10px 0 0;
+  color: #858e9e;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   LOADING / ERROR
+   ========================================================= */
+
+.expiry-state {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+  border: 1px solid #e4e7ee;
+  border-radius: 22px;
+  background: #ffffff;
+  color: #758096;
+  font-size: 14px;
+  text-align: center;
+}
+
+.expiry-state.error {
+  color: #d34550;
+}
+
+.expiry-state button {
+  height: 43px;
+  margin-top: 17px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 10px;
+  background: #111827;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.expiry-state button:hover {
+  background: #635bff;
+}
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1400px) {
+  .expiry-page {
+    width: calc(100% - 100px);
+    max-width: 1550px;
+    padding-top: 48px;
+  }
+
+  .expiry-stat {
+    min-height: 155px;
+  }
+
+  .expiry-stat strong {
+    font-size: 40px;
+  }
+
+  .expiry-panel {
+    padding: 32px;
+  }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+  .expiry-page {
+    width: calc(100% - 50px);
+  }
+
+  .expiry-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .expiry-item {
+    grid-template-columns: 55px minmax(0, 1fr) auto;
+  }
+
+  .expiry-date {
+    display: none;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .expiry-page {
+    width: calc(100% - 28px);
+    padding-top: 28px;
+  }
+
+  .expiry-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .expiry-header h1 {
+    font-size: 40px;
+    letter-spacing: -1.8px;
+  }
+
+  .expiry-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .expiry-panel {
+    padding: 20px;
+  }
+
+  .expiry-panel-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .expiry-item {
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 13px;
+    padding: 14px;
+  }
+
+  .expiry-status {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .expiry-view-button {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 430px) {
+  .expiry-page {
+    width: calc(100% - 20px);
+  }
+
+  .expiry-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .expiry-header h1 {
+    font-size: 34px;
+  }
+
+  .expiry-item {
+    grid-template-columns: 45px minmax(0, 1fr);
+  }
+}

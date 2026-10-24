@@ -1,0 +1,1109 @@
+/* =========================================================
+   LIFEVAULT AI — ACTION EXTRACTOR
+   ========================================================= */
+
+.action-extractor-page {
+  width: calc(100% - 80px);
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 42px 0 90px;
+  box-sizing: border-box;
+  color: #151a2b;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.action-extractor-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 30px;
+}
+
+.action-extractor-header-content {
+  min-width: 0;
+}
+
+.action-extractor-eyebrow {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #635bff;
+
+  font-size: 11px;
+  font-weight: 850;
+
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.action-extractor-header h1 {
+  margin: 0;
+
+  color: #151a2b;
+
+  font-size: clamp(42px, 4vw, 60px);
+  line-height: 1.05;
+
+  font-weight: 900;
+
+  letter-spacing: -2.8px;
+}
+
+.action-extractor-header p {
+  max-width: 720px;
+
+  margin: 14px 0 0;
+
+  color: #758096;
+
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   HEADER BUTTON
+   ========================================================= */
+
+.action-extractor-refresh {
+  flex-shrink: 0;
+
+  height: 48px;
+
+  padding: 0 19px;
+
+  border: 1px solid #dfe3ea;
+  border-radius: 11px;
+
+  background: #ffffff;
+  color: #20283a;
+
+  font-family: inherit;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.action-extractor-refresh:hover {
+  border-color: #d0ccff;
+
+  background: #f5f3ff;
+
+  color: #635bff;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   AI HERO
+   ========================================================= */
+
+.action-extractor-hero {
+  position: relative;
+
+  overflow: hidden;
+
+  min-height: 210px;
+
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 27px;
+
+  padding: 38px 42px;
+
+  border: 1px solid #ddd9ff;
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      110deg,
+      #ffffff 0%,
+      #fafaff 55%,
+      #f0eeff 100%
+    );
+
+  box-sizing: border-box;
+}
+
+.action-extractor-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  right: -100px;
+  top: -170px;
+
+  border: 1px solid rgba(99, 91, 255, 0.12);
+
+  border-radius: 50%;
+}
+
+.action-extractor-hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 850px;
+}
+
+.action-extractor-hero-badge {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 29px;
+
+  padding: 0 11px;
+
+  border-radius: 8px;
+
+  background: #ebe9ff;
+
+  color: #635bff;
+
+  font-size: 9px;
+  font-weight: 850;
+
+  letter-spacing: 1px;
+}
+
+.action-extractor-hero h2 {
+  margin: 15px 0 0;
+
+  color: #172033;
+
+  font-size: 29px;
+  line-height: 1.2;
+
+  font-weight: 850;
+
+  letter-spacing: -0.8px;
+}
+
+.action-extractor-hero p {
+  max-width: 750px;
+
+  margin: 10px 0 0;
+
+  color: #737e91;
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   AI ORB
+   ========================================================= */
+
+.action-extractor-orb {
+  position: absolute;
+
+  z-index: 2;
+
+  right: 75px;
+
+  width: 76px;
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 23px;
+
+  background: #635bff;
+
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: 900;
+
+  box-shadow:
+    0 18px 42px rgba(99, 91, 255, 0.27);
+}
+
+
+/* =========================================================
+   SUMMARY STATS
+   ========================================================= */
+
+.action-extractor-stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+.action-extractor-stat {
+  min-height: 135px;
+
+  padding: 22px;
+
+  border: 1px solid #e4e7ee;
+
+  border-radius: 17px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+.action-extractor-stat span {
+  display: block;
+
+  color: #858e9e;
+
+  font-size: 9px;
+  font-weight: 850;
+
+  letter-spacing: 1px;
+}
+
+.action-extractor-stat strong {
+  display: block;
+
+  margin-top: 20px;
+
+  color: #172033;
+
+  font-size: 35px;
+  line-height: 1;
+
+  font-weight: 900;
+}
+
+.action-extractor-stat p {
+  margin: 9px 0 0;
+
+  color: #929aaa;
+
+  font-size: 10px;
+}
+
+.action-extractor-stat.urgent {
+  border-color: #ffd0d4;
+
+  background: #fff5f5;
+}
+
+.action-extractor-stat.urgent strong {
+  color: #d34550;
+}
+
+.action-extractor-stat.today {
+  border-color: #ffe0ad;
+
+  background: #fffaf1;
+}
+
+.action-extractor-stat.today strong {
+  color: #c7791d;
+}
+
+.action-extractor-stat.done {
+  border-color: #cdeede;
+
+  background: #f5fcf8;
+}
+
+.action-extractor-stat.done strong {
+  color: #179463;
+}
+
+
+/* =========================================================
+   TOOLBAR
+   ========================================================= */
+
+.action-extractor-toolbar {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 20px;
+}
+
+.action-extractor-filters {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.action-extractor-filter {
+  height: 37px;
+
+  padding: 0 14px;
+
+  border: 1px solid #e0e4eb;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: #6e7889;
+
+  font-family: inherit;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.action-extractor-filter:hover,
+.action-extractor-filter.active {
+  border-color: #635bff;
+
+  background: #f2f0ff;
+
+  color: #635bff;
+}
+
+.action-extractor-count {
+  flex-shrink: 0;
+
+  color: #8b94a3;
+
+  font-size: 10px;
+  font-weight: 750;
+}
+
+
+/* =========================================================
+   MAIN ACTION LIST
+   ========================================================= */
+
+.action-extractor-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   ACTION CARD
+   ========================================================= */
+
+.action-card {
+  display: grid;
+
+  grid-template-columns:
+    52px
+    minmax(0, 1fr)
+    auto;
+
+  gap: 18px;
+
+  align-items: center;
+
+  padding: 19px 21px;
+
+  border: 1px solid #e4e7ee;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 6px 23px rgba(20, 27, 45, 0.03);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.action-card:hover {
+  border-color: #d5d1ff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 15px 35px rgba(20, 27, 45, 0.08);
+}
+
+
+/* =========================================================
+   ACTION ICON
+   ========================================================= */
+
+.action-card-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #f1efff;
+
+  color: #635bff;
+
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.action-card.urgent
+.action-card-icon {
+  background: #fff0f1;
+
+  color: #d34550;
+}
+
+.action-card.today
+.action-card-icon {
+  background: #fff4e3;
+
+  color: #c7791d;
+}
+
+.action-card.completed
+.action-card-icon {
+  background: #eafaf2;
+
+  color: #179463;
+}
+
+
+/* =========================================================
+   ACTION CONTENT
+   ========================================================= */
+
+.action-card-content {
+  min-width: 0;
+}
+
+.action-card-top {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.action-card-title {
+  min-width: 0;
+}
+
+.action-card-title h3 {
+  margin: 0;
+
+  color: #20293c;
+
+  font-size: 14px;
+
+  line-height: 1.4;
+
+  font-weight: 850;
+
+  overflow-wrap: anywhere;
+}
+
+.action-card-title p {
+  margin: 6px 0 0;
+
+  color: #8992a2;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   PRIORITY BADGE
+   ========================================================= */
+
+.action-priority {
+  flex-shrink: 0;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 27px;
+
+  padding: 0 9px;
+
+  border-radius: 7px;
+
+  background: #f1efff;
+
+  color: #635bff;
+
+  font-size: 8px;
+
+  font-weight: 850;
+
+  text-transform: uppercase;
+}
+
+.action-priority.high {
+  background: #fff0f1;
+
+  color: #d34550;
+}
+
+.action-priority.medium {
+  background: #fff4e3;
+
+  color: #c7791d;
+}
+
+.action-priority.low {
+  background: #eafaf2;
+
+  color: #179463;
+}
+
+
+/* =========================================================
+   ACTION DESCRIPTION
+   ========================================================= */
+
+.action-card-description {
+  margin: 12px 0 0;
+
+  color: #737e91;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   SOURCE
+   ========================================================= */
+
+.action-card-source {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin-top: 12px;
+
+  color: #9aa2af;
+
+  font-size: 9px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.action-card-source strong {
+  color: #687386;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   ACTION RIGHT SIDE
+   ========================================================= */
+
+.action-card-right {
+  min-width: 125px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+
+/* =========================================================
+   DEADLINE
+   ========================================================= */
+
+.action-deadline {
+  text-align: right;
+}
+
+.action-deadline span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #9aa2af;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+
+  text-transform: uppercase;
+}
+
+.action-deadline strong {
+  color: #293248;
+
+  font-size: 11px;
+
+  font-weight: 850;
+}
+
+.action-deadline.overdue strong {
+  color: #d34550;
+}
+
+.action-deadline.today strong {
+  color: #c7791d;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.action-card-buttons {
+  display: flex;
+
+  gap: 7px;
+}
+
+.action-button {
+  height: 34px;
+
+  padding: 0 11px;
+
+  border-radius: 8px;
+
+  font-family: inherit;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.action-button.complete {
+  border: 1px solid #d8eadf;
+
+  background: #f5fcf8;
+
+  color: #179463;
+}
+
+.action-button.complete:hover {
+  border-color: #bde2cd;
+
+  background: #eafaf2;
+}
+
+.action-button.view {
+  border: 1px solid #dfe3ea;
+
+  background: #ffffff;
+
+  color: #4f596c;
+}
+
+.action-button.view:hover {
+  border-color: #cfcaff;
+
+  background: #f5f3ff;
+
+  color: #635bff;
+}
+
+
+/* =========================================================
+   COMPLETED CARD
+   ========================================================= */
+
+.action-card.completed {
+  opacity: 0.72;
+}
+
+.action-card.completed .action-card-title h3 {
+  text-decoration: line-through;
+
+  color: #7e8797;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.action-extractor-empty {
+  min-height: 420px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  padding: 50px 30px;
+
+  border: 1px dashed #d7dce5;
+
+  border-radius: 21px;
+
+  background: #ffffff;
+
+  text-align: center;
+}
+
+.action-extractor-empty-icon {
+  width: 68px;
+  height: 68px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 19px;
+
+  border-radius: 18px;
+
+  background: #efedff;
+
+  color: #635bff;
+
+  font-size: 25px;
+
+  font-weight: 900;
+}
+
+.action-extractor-empty h2 {
+  margin: 0;
+
+  color: #182033;
+
+  font-size: 25px;
+
+  font-weight: 850;
+}
+
+.action-extractor-empty p {
+  max-width: 540px;
+
+  margin: 10px 0 0;
+
+  color: #858e9e;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   LOADING / ERROR
+   ========================================================= */
+
+.action-extractor-state {
+  min-height: 500px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  padding: 40px;
+
+  border: 1px solid #e4e7ee;
+
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  color: #758096;
+
+  font-size: 14px;
+
+  text-align: center;
+}
+
+.action-extractor-state.error {
+  color: #d34550;
+}
+
+.action-extractor-state button {
+  height: 43px;
+
+  margin-top: 17px;
+
+  padding: 0 18px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #111827;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.action-extractor-state button:hover {
+  background: #635bff;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1400px) {
+
+  .action-extractor-page {
+    width: calc(100% - 100px);
+
+    max-width: 1550px;
+
+    padding-top: 48px;
+  }
+
+  .action-extractor-hero {
+    min-height: 225px;
+  }
+
+  .action-card {
+    padding: 22px 24px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+  .action-extractor-page {
+    width: calc(100% - 50px);
+  }
+
+  .action-extractor-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .action-extractor-refresh {
+    width: 100%;
+  }
+
+  .action-extractor-stats {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .action-card {
+    grid-template-columns:
+      52px
+      minmax(0, 1fr);
+  }
+
+  .action-card-right {
+    grid-column: 2;
+
+    align-items: flex-start;
+
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    width: 100%;
+  }
+
+  .action-deadline {
+    text-align: left;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .action-extractor-page {
+    width: calc(100% - 28px);
+
+    padding-top: 28px;
+
+    padding-bottom: 65px;
+  }
+
+  .action-extractor-header h1 {
+    font-size: 40px;
+
+    letter-spacing: -2px;
+  }
+
+  .action-extractor-header p {
+    font-size: 13px;
+  }
+
+  .action-extractor-hero {
+    min-height: 230px;
+
+    padding: 27px;
+
+    border-radius: 19px;
+  }
+
+  .action-extractor-hero h2 {
+    max-width: 75%;
+
+    font-size: 22px;
+  }
+
+  .action-extractor-hero p {
+    max-width: 75%;
+
+    font-size: 10px;
+  }
+
+  .action-extractor-orb {
+    right: 23px;
+
+    width: 57px;
+    height: 57px;
+
+    border-radius: 17px;
+  }
+
+  .action-extractor-stats {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .action-extractor-toolbar {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .action-card {
+    grid-template-columns:
+      48px
+      minmax(0, 1fr);
+
+    gap: 12px;
+
+    padding: 17px;
+  }
+
+  .action-card-top {
+    flex-direction: column;
+
+    gap: 9px;
+  }
+
+  .action-card-right {
+    grid-column: 2;
+
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .action-deadline {
+    text-align: left;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+  .action-extractor-page {
+    width: calc(100% - 20px);
+  }
+
+  .action-extractor-header h1 {
+    font-size: 34px;
+  }
+
+  .action-extractor-hero h2 {
+    max-width: 100%;
+
+    font-size: 20px;
+  }
+
+  .action-extractor-hero p {
+    max-width: 100%;
+  }
+
+  .action-extractor-orb {
+    display: none;
+  }
+
+  .action-extractor-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .action-card {
+    grid-template-columns: 44px minmax(0, 1fr);
+  }
+
+}

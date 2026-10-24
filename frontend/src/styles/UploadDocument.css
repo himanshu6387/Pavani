@@ -1,0 +1,375 @@
+/* =====================================================
+   LIFEVAULT AI - UPLOAD DOCUMENT
+   ===================================================== */
+
+.upload-document-page {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 35px 25px 60px;
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.upload-page-header {
+  margin-bottom: 25px;
+}
+
+.upload-back-button {
+  padding: 0;
+  margin-bottom: 25px;
+
+  border: 0;
+  background: transparent;
+
+  color: #697386;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.upload-back-button:hover {
+  color: #182235;
+}
+
+.upload-eyebrow {
+  display: block;
+
+  color: #858e9e;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+.upload-page-header h1 {
+  margin: 6px 0 7px;
+
+  color: #20283a;
+
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.upload-page-header p {
+  max-width: 580px;
+
+  margin: 0;
+
+  color: #7c8696;
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* =====================================================
+   CARD
+   ===================================================== */
+
+.upload-card {
+  padding: 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #e4e8ee;
+  border-radius: 16px;
+}
+
+/* =====================================================
+   DROP AREA
+   ===================================================== */
+
+.upload-drop-area {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 50px 25px;
+
+  border: 1px dashed #cfd5df;
+  border-radius: 14px;
+
+  background: #fafbfc;
+
+  text-align: center;
+
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.upload-drop-area.dragging {
+  border-color: #707b8e;
+  background: #f3f5f8;
+}
+
+.upload-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+
+  border-radius: 13px;
+
+  background: #151d2d;
+
+  color: #ffffff;
+
+  font-size: 25px;
+}
+
+.upload-drop-area h2 {
+  max-width: 500px;
+
+  margin: 0;
+
+  color: #303849;
+
+  font-size: 16px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.upload-drop-area p {
+  margin: 6px 0 15px;
+
+  color: #858e9d;
+
+  font-size: 10px;
+}
+
+.choose-file-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 16px;
+
+  border-radius: 9px;
+
+  background: #151d2d;
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.choose-file-button:hover {
+  background: #202a3c;
+}
+
+.upload-drop-area small {
+  margin-top: 12px;
+
+  color: #9aa2af;
+
+  font-size: 8px;
+}
+
+/* =====================================================
+   FIELD
+   ===================================================== */
+
+.upload-field {
+  margin-top: 20px;
+}
+
+.upload-field label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #4e596b;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.upload-field select {
+  width: 100%;
+  height: 43px;
+
+  box-sizing: border-box;
+
+  padding: 0 12px;
+
+  border: 1px solid #dfe4eb;
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #424d5e;
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.upload-field select:focus {
+  border-color: #9ca6b6;
+}
+
+/* =====================================================
+   MESSAGES
+   ===================================================== */
+
+.upload-message {
+  margin-top: 15px;
+
+  padding: 12px;
+
+  border-radius: 9px;
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.upload-message.error {
+  border: 1px solid #efd5d5;
+
+  background: #fff5f5;
+
+  color: #a15555;
+}
+
+.upload-message.success {
+  border: 1px solid #d4e9d9;
+
+  background: #f0f9f2;
+
+  color: #4d7658;
+}
+
+/* =====================================================
+   SUBMIT
+   ===================================================== */
+
+.upload-submit-button {
+  width: 100%;
+  height: 45px;
+
+  margin-top: 18px;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: #151d2d;
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.upload-submit-button:hover:not(:disabled) {
+  background: #202a3c;
+}
+
+.upload-submit-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* =====================================================
+   AI INFO
+   ===================================================== */
+
+.upload-ai-info {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 13px;
+
+  margin-top: 15px;
+
+  padding: 17px;
+
+  border: 1px solid #e4e8ee;
+  border-radius: 12px;
+
+  background: #ffffff;
+}
+
+.upload-ai-badge {
+  width: 32px;
+  height: 32px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #151d2d;
+  color: #ffffff;
+
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.upload-ai-info strong {
+  display: block;
+
+  color: #424d5e;
+
+  font-size: 11px;
+}
+
+.upload-ai-info p {
+  margin: 5px 0 0;
+
+  color: #858e9d;
+
+  font-size: 9px;
+
+  line-height: 1.6;
+}
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+  .upload-document-page {
+    padding: 22px 15px 40px;
+  }
+
+  .upload-page-header h1 {
+    font-size: 25px;
+  }
+
+  .upload-card {
+    padding: 16px;
+  }
+
+  .upload-drop-area {
+    padding: 40px 15px;
+  }
+
+  .upload-drop-area h2 {
+    max-width: 250px;
+  }
+
+}

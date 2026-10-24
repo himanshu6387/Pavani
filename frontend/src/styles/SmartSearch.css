@@ -1,0 +1,416 @@
+/* =========================================================
+   SMART SEARCH — LIFEVAULT AI
+   ========================================================= */
+
+.smart-search {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+
+
+/* Header */
+
+.smart-search-header {
+  margin-bottom: 16px;
+}
+
+.smart-search-header span,
+.smart-search-eyebrow,
+.smart-search-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #94a3b8;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.smart-search-header h2,
+.smart-search-header h3,
+.smart-search-title {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 17px;
+  font-weight: 800;
+
+  letter-spacing: -.4px;
+}
+
+.smart-search-header p {
+  margin: 5px 0 0;
+
+  color: #94a3b8;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+
+/* Search form */
+
+.smart-search form {
+  width: 100%;
+  margin: 0;
+}
+
+
+/* Search input wrapper */
+
+.smart-search-input-wrapper,
+.search-input-wrapper,
+.smart-search-input-container {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+}
+
+
+/* Search icon */
+
+.smart-search-input-wrapper::before,
+.search-input-wrapper::before,
+.smart-search-input-container::before {
+  content: "⌕";
+
+  position: absolute;
+
+  left: 14px;
+
+  z-index: 2;
+
+  color: #94a3b8;
+
+  font-size: 17px;
+
+  pointer-events: none;
+}
+
+
+/* Input */
+
+.smart-search input,
+.smart-search input[type="text"],
+.smart-search input[type="search"] {
+  width: 100% !important;
+
+  height: 46px !important;
+
+  min-height: 46px !important;
+
+  box-sizing: border-box;
+
+  padding: 0 88px 0 42px !important;
+
+  border: 1px solid #e3e6ed !important;
+
+  border-radius: 12px !important;
+
+  outline: none !important;
+
+  background: #f8f9fb !important;
+
+  color: #172033 !important;
+
+  font-family: inherit !important;
+
+  font-size: 11px !important;
+
+  box-shadow: none !important;
+
+  transition:
+    border-color .2s ease,
+    background .2s ease,
+    box-shadow .2s ease;
+}
+
+
+.smart-search input::placeholder {
+  color: #a4abb7;
+}
+
+
+.smart-search input:hover {
+  border-color: #d5d9e2 !important;
+
+  background: #fff !important;
+}
+
+
+.smart-search input:focus {
+  border-color: #8f89ff !important;
+
+  background: #fff !important;
+
+  box-shadow:
+    0 0 0 4px rgba(99, 91, 255, .08) !important;
+}
+
+
+/* Search button */
+
+.smart-search button[type="submit"],
+.smart-search .search-button,
+.smart-search .smart-search-button {
+  min-width: 68px !important;
+
+  height: 34px !important;
+
+  min-height: 34px !important;
+
+  padding: 0 12px !important;
+
+  border: 0 !important;
+
+  border-radius: 8px !important;
+
+  background: #111827 !important;
+
+  color: white !important;
+
+  font-family: inherit !important;
+
+  font-size: 9px !important;
+
+  font-weight: 800 !important;
+
+  cursor: pointer !important;
+
+  transition: all .2s ease;
+}
+
+
+.smart-search button[type="submit"]:hover,
+.smart-search .search-button:hover,
+.smart-search .smart-search-button:hover {
+  background: #635bff !important;
+
+  transform: translateY(-1px);
+}
+
+
+/* If button is positioned after input */
+
+.smart-search-input-wrapper button,
+.search-input-wrapper button,
+.smart-search-input-container button {
+  position: absolute;
+
+  right: 6px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  z-index: 3;
+}
+
+
+/* Categories */
+
+.smart-search-categories,
+.search-categories,
+.category-filters {
+  display: flex !important;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 6px !important;
+
+  margin-top: 11px !important;
+}
+
+
+.smart-search-categories button,
+.search-categories button,
+.category-filters button {
+  height: 28px !important;
+
+  min-height: 28px !important;
+
+  padding: 0 10px !important;
+
+  margin: 0 !important;
+
+  border: 1px solid #e4e6ed !important;
+
+  border-radius: 7px !important;
+
+  background: white !important;
+
+  color: #667085 !important;
+
+  font-family: inherit !important;
+
+  font-size: 8px !important;
+
+  font-weight: 700 !important;
+
+  cursor: pointer !important;
+
+  transition: all .18s ease;
+}
+
+
+.smart-search-categories button:hover,
+.search-categories button:hover,
+.category-filters button:hover {
+  border-color: #bcb8ff !important;
+
+  background: #f7f6ff !important;
+
+  color: #635bff !important;
+}
+
+
+.smart-search-categories button.active,
+.search-categories button.active,
+.category-filters button.active,
+.smart-search-categories button.selected,
+.search-categories button.selected {
+  border-color: #635bff !important;
+
+  background: #635bff !important;
+
+  color: white !important;
+}
+
+
+/* Results */
+
+.smart-search-results,
+.search-results {
+  width: 100%;
+
+  margin-top: 14px;
+}
+
+
+.smart-search-results > *,
+.search-results > * {
+  box-sizing: border-box;
+}
+
+
+.smart-search-result,
+.search-result,
+.result-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  width: 100%;
+
+  padding: 12px;
+
+  margin-bottom: 7px;
+
+  border: 1px solid #eceef3;
+
+  border-radius: 10px;
+
+  background: white;
+
+  transition: all .18s ease;
+}
+
+
+.smart-search-result:hover,
+.search-result:hover,
+.result-item:hover {
+  border-color: #d8d5ff;
+
+  background: #fbfaff;
+
+  transform: translateX(2px);
+}
+
+
+.smart-search-result h3,
+.search-result h3,
+.result-item h3 {
+  margin: 0 0 3px;
+
+  color: #1f2937;
+
+  font-size: 10px;
+}
+
+
+.smart-search-result p,
+.search-result p,
+.result-item p {
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 9px;
+
+  line-height: 1.45;
+}
+
+
+/* Empty state */
+
+.smart-search-empty,
+.search-empty {
+  padding: 20px;
+
+  border: 1px dashed #dfe2e9;
+
+  border-radius: 10px;
+
+  color: #9aa2ae;
+
+  text-align: center;
+
+  font-size: 10px;
+}
+
+
+/* Loading */
+
+.smart-search-loading {
+  padding: 12px;
+
+  color: #635bff;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+  .smart-search-categories,
+  .search-categories,
+  .category-filters {
+    gap: 5px !important;
+  }
+
+  .smart-search-categories button,
+  .search-categories button,
+  .category-filters button {
+    padding: 0 8px !important;
+  }
+
+}
